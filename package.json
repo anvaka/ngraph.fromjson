@@ -1,0 +1,23 @@
+{
+  "name": "ngraph.fromjson",
+  "version": "0.1.0",
+  "description": "Library to load graph from simple json format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ngraph",
+    "serialize",
+    "store",
+    "graph",
+    "load",
+    "json"
+  ],
+  "author": "Andrei Kashcha",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anvaka/ngraph.fromjson"
+  }
+}
