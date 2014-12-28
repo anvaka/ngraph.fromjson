@@ -4,7 +4,7 @@
   "description": "Library to load graph from simple json format",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap test/*.js"
   },
   "keywords": [
     "ngraph",
@@ -19,5 +19,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/anvaka/ngraph.fromjson"
+  },
+  "devDependencies": {
+    "ngraph.tojson": "^0.1.0",
+    "tap": "^0.4.13"
+  },
+  "dependencies": {
+    "ngraph.graph": "0.0.5"
   }
 }
