@@ -3,12 +3,14 @@ module.exports = load;
 var createGraph = require('ngraph.graph');
 
 function load(jsonGraph) {
-  if (typeof jsonGraph !== 'string') {
-    throw new Error('Cannot load graph which is not stored as a string');
+  var stored;
+  if (typeof jsonGraph === 'string') {
+    stored = JSON.parse(jsonGraph);
+  } else {
+    stored = jsonGraph;
   }
 
-  var stored = JSON.parse(jsonGraph),
-      graph = createGraph(),
+  var graph = createGraph(),
       i;
 
   if (stored.links === undefined || stored.nodes === undefined) {
