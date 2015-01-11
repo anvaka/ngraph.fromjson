@@ -2,6 +2,8 @@
 
 Library to load graph from simple json format
 
+[![Build Status](https://travis-ci.org/anvaka/ngraph.fromjson.svg)](https://travis-ci.org/anvaka/ngraph.fromjson)
+
 # usage
 
 ``` javascript
