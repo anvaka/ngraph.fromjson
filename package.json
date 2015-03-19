@@ -25,6 +25,6 @@
     "tap": "^0.4.13"
   },
   "dependencies": {
-    "ngraph.graph": "0.0.8"
+    "ngraph.graph": "0.0.9"
   }
 }
