@@ -1,6 +1,6 @@
 {
   "name": "ngraph.fromjson",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Library to load graph from simple json format",
   "main": "index.js",
   "scripts": {
