@@ -6,7 +6,7 @@ Library to load graph from simple json format
 
 # usage
 
-``` javascript
+``` js
 // JSON string can be produced by `ngraph.tojson` library
 // https://github.com/anvaka/ngraph.tojson
 var jsonString = ' {"nodes":[{"id":"hello"},{"id":"world"}],"links":[{"fromId":"hello","toId":"world"}]}'
@@ -20,7 +20,7 @@ graph.getLinksCount(); // 1
 
 You can also provide custom transform functions for deserializer:
 
-```
+``` js
 var jsonString = {
   "nodes":[[1,"Custom data"],[2,null]],"links":[[1,2,"Custom link data"]]
   };
