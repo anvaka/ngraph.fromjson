@@ -2,7 +2,8 @@
 
 Library to load graph from simple json format
 
-[![Build Status](https://travis-ci.org/anvaka/ngraph.fromjson.svg)](https://travis-ci.org/anvaka/ngraph.fromjson)
+
+[![Build Status](https://github.com/anvaka/ngraph.fromjson/actions/workflows/tests.yaml/badge.svg)](https://github.com/anvaka/ngraph.fromjson/actions/workflows/tests.yaml)
 
 # usage
 
