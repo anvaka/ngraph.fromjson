@@ -28,9 +28,9 @@ test('Can save and load graph with transform', function(t) {
   var loadedGraph = fromJSON(json, nodeLoadTransform, linkLoadTransform);
 
   t.ok(loadedGraph.getNode(1) && loadedGraph.getNode(2) && loadedGraph.getNodesCount() === 2, 'Should have all nodes');
-  t.equals(loadedGraph.getNode(1).data, 'Custom data', 'Node data is loaded');
+  t.equal(loadedGraph.getNode(1).data, 'Custom data', 'Node data is loaded');
   t.ok(loadedGraph.hasLink(1, 2) && loadedGraph.getLinksCount() === 1, 'Should have all links');
-  t.equals(loadedGraph.hasLink(1, 2).data, 'Custom link data', 'link data is loaded');
+  t.equal(loadedGraph.hasLink(1, 2).data, 'Custom link data', 'link data is loaded');
   t.ok(nodeTransformCalledTimes && linkTransformCalledTimes, 'Transform is called');
   t.end();
 

@@ -4,7 +4,7 @@
   "description": "Library to load graph from simple json format",
   "main": "index.js",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tap --branches=70 --lines=70 --statements=70 --functions=70 test/*.js"
   },
   "keywords": [
     "ngraph",
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "ngraph.tojson": "^1.0.0",
-    "tap": "^14.9.2"
+    "tap": "^15.0.9"
   },
   "dependencies": {
     "ngraph.graph": "^19.1.0"
