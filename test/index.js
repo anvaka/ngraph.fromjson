@@ -14,7 +14,32 @@ test('it can restore from json object', function(t) {
   t.equal(restored.getLinksCount(), 1);
 
   t.end();
+});
+
+test('it throws when json object has no links or nodes', function(t) {
+  let json = {};
+  t.throws(function() {fromJSON(json);});
+  t.end();
+});
+
+test('it throw when node has no id', function(t) {
+  let json = {
+    nodes: [{}],
+    links: []
+  };
+  t.throws(function() {fromJSON(json);});
+  t.end();
+});
+
+test('it throw when link has no fromId', function(t) {
+  let json = {
+    nodes: [{id: 1}],
+    links: [{toId: 1}]
+  };
+  t.throws(function() {fromJSON(json);});
+  t.end();
 })
+
 
 test('Can save and load graph', function(t) {
   var g = createGraph();
