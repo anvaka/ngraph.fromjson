@@ -1,7 +1,20 @@
-var test = require('tap').test,
-  createGraph = require('ngraph.graph'),
-  fromJSON = require('../');
-toJSON = require('ngraph.tojson');
+var test = require('tap').test;
+var createGraph = require('ngraph.graph');
+var fromJSON = require('../');
+
+var toJSON = require('ngraph.tojson');
+
+test('it can restore from json object', function(t) {
+  var graph = createGraph();
+  graph.addLink(1, 2);
+  var json = toJSON(graph);
+  var restored = fromJSON(JSON.parse(json));
+
+  t.equal(restored.getNodesCount(), 2);
+  t.equal(restored.getLinksCount(), 1);
+
+  t.end();
+})
 
 test('Can save and load graph', function(t) {
   var g = createGraph();
