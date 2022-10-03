@@ -2,7 +2,7 @@ module.exports = load;
 
 var createGraph = require('ngraph.graph');
 
-function load(jsonGraph, nodeTransform, linkTransform) {
+function load(jsonGraph, nodeTransform, linkTransform, options) {
   var stored;
   nodeTransform = nodeTransform || id;
   linkTransform = linkTransform || id;
@@ -12,7 +12,7 @@ function load(jsonGraph, nodeTransform, linkTransform) {
     stored = jsonGraph;
   }
 
-  var graph = createGraph(),
+  var graph = createGraph(options),
       i;
 
   if (stored.links === undefined || stored.nodes === undefined) {

@@ -21,6 +21,7 @@ declare module 'ngraph.fromjson' {
   export default function load<NodeData = any, LinkData = any, Node = JsonNode<NodeData>, Link = JsonLink<LinkData>>(
     jsonGraph: JsonGraph<JsonNode<NodeData> | Node, JsonLink<LinkData> | Link> | string,
     nodeTransform?: (node: Node) => JsonNode<NodeData>,
-    linkTransform?: (link: Link) => JsonLink<LinkData>
+    linkTransform?: (link: Link) => JsonLink<LinkData>,
+    options?: { multigraph: boolean }
   ): Graph<NodeData, LinkData> & EventedType;
 }
